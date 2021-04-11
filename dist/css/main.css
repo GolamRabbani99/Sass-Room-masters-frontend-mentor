@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mySlides {
+  width: 100%;
+  display: block;
+}
+
+nav {
+  padding-top: 45px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  top: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  z-index: -1;
+}
+
+nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 50px;
+  list-style: none;
+  width: 90px;
+}
+
+nav ul li .nav-links:hover {
+  color: green;
+}
+
+nav ul li a {
+  font-family: "Spartan", sans-serif;
+  font-weight: 600;
+  color: #000;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+/* logo */
+.hero-logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5em;
+  font-family: "Spartan", sans-serif;
+}
+
+.logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* burger menu css */
+.burger-menu div {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.burger-menu {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  z-index: 1;
+}
+
+.line1-active .line1 {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.line3-active .line3 {
+  background-color: gray;
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* carousel button */
+.prev,
+.nxt {
+  display: block;
+  position: absolute;
+  background-color: #000;
+  border: none;
+  padding: 3% 5%;
+  cursor: pointer;
+}
+
+.nxt {
+  right: 0;
+  bottom: 0;
+}
+
+.prev {
+  right: 60px;
+  bottom: 0;
+}
+
+.hero-buttons {
+  z-index: 3;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/* hero section content */
+.hero-content {
+  margin: 18% 5%;
+  padding-left: 1.4em;
+}
+
+.hero-header {
+  font-size: 2em;
+  font-family: "Spartan", sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+p {
+  line-height: 1.7em;
+  color: #a1a1a1;
+  margin: 8% auto;
+  font-family: "Spartan", sans-serif;
+}
+
+.shop-btn {
+  letter-spacing: 1.2em;
+  font-family: "Spartan", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: green;
+  font-weight: 700;
+}
+
+.shop-btn:hover {
+  color: #000;
+}
+
+/* about section */
+.about-images {
+  width: 100%;
+}
+
+.about-images:hover {
+  opacity: 0.5;
+}
+
+.about-last {
+  opacity: 1;
+}
+
+.about-content {
+  margin: 18% 5%;
+}
+
+.about-content p {
+  margin-top: 5%;
+}
+
+.about-header {
+  letter-spacing: 0.5em;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: "Spartan", sans-serif;
+}
+
+.toggle .overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: block;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 1;
+  /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.desktop-hero-images,
+.desktop-btns {
+  display: none;
+}
+
+.prev:hover,
+.nxt:hover {
+  background-color: #454545;
+}
+
+/* desktop css */
+@media only screen and (min-width: 501px) and (max-width: 1600px) {
+  .mobile-hero-images {
+    display: none;
+  }
+  .desktop-hero-images,
+  .desktop-btns {
+    display: block;
+  }
+  .burger-menu {
+    display: none;
+  }
+  nav ul {
+    background-color: transparent;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: none;
+    transition: none;
+    z-index: 1;
+  }
+  nav {
+    width: 200px;
+  }
+  nav li {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100px;
+  }
+  nav li a {
+    color: #fff;
+  }
+  #hero-section,
+  #about-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    height: 533px;
+    margin: 0;
+  }
+  #about-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    height: 10%;
+  }
+  /* carousel button */
+  .prev,
+  .nxt {
+    padding: 3% 4%;
+    bottom: 0.5px;
+  }
+  .prev {
+    right: -80px;
+  }
+  .nxt {
+    right: -150px;
+  }
+  .about-content {
+    margin: auto auto;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-content p {
+    margin-top: 2.5%;
+    margin-bottom: 0;
+  }
+  .about-images {
+    height: 248.28px;
+  }
+  .nav-links::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s;
+  }
+  .nav-links:hover::after {
+    width: 100%;
+    /* //transition: width .3s; */
+  }
+}
+/*# sourceMappingURL=main.css.map */
